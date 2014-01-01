@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+/** overwrite wp and parent theme things */
+
+/** ======= */
+
+
+@font-face {
+    font-family: "Kabel";
+    src: url("Kabel.woff") format("woff");
+}
+
+
+#pagehead1 {
+	background-color: #012138;
+	border-top:3px solid #fea500;
+    color: #FFFFFF;
+    line-height:2.75em;
+}
+
+#pagehead1 * {
+	text-align:right;
+	color:#0198FF;
+	text-decoration: none;
+}
+
+#pagehead1 ul,#pagehead1 li {
+	display: inline-block;
+	padding-left:2em;
+}
+
+#pagehead1 a:hover {
+	text-decoration: underline;
+}
+
+#pagehead2 {
+	background-color: #001523;
+    color: #FFFFFF;
+}
+
+#pagehead2 h1 {
+	font-family: Kabel;
+	font-size: 4em;
+    font-weight: normal;
+    margin:0;
+    padding: .875em 0 .375em 0;
+}
+
+#pagehead2 a:link, #pagehead2 a:visited {
+    text-decoration: none;
+}
+
+#pagehead2 h1 a {
+	color:white;
+}
+#pagehead2 h1 a {
+	color:white;
+}
+
+.fbdd-post-list .wp-post-image {
+	width:20%;height:auto;
+	float:left;
+	margin:0 1em 1em 0;
+}
+
+.fbdd-post-list h1 {
+	clear:none;
+}

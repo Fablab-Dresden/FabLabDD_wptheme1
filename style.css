@@ -1,0 +1,60 @@
+/*
+ Theme Name:     Fablabdd
+ Theme URI:      http://fablabdd.de
+ Description:    fablabdd based on Twenty Twelfe
+ Author:         Jörg Eichhorn
+ Author URI:     http://fablabdd.de
+ Template:       twentytwelve
+ Version:        1.0.0
+*/
+
+@import url("../twentytwelve/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+.site, body .site {
+	box-shadow: none;
+	margin: 0 auto;
+	background: none;
+}
+
+.site {
+	max-width:75em;
+}
+
+.site-content {
+	width:75%;
+}
+
+.widget-area {
+	width:20%;
+}
+
+article {
+	background-color:white;
+	padding:1em;
+	border-left:.375em solid #ff7a00;
+	border-bottom:0;
+}
+article * {color:#404040;}
+
+.entry-header {
+	margin-bottom:.5em;
+}
+
+.entry-header .comments-link {
+	text-align:right;
+	margin:0;
+}
+
+.entry-header .entry-title {
+	font-weight:bold;
+}
+
+.site-header {
+	padding:0;
+}
+.main-navigation {
+	margin-top:0;
+}
