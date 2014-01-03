@@ -20,7 +20,13 @@
 }
 
 .site {
-	max-width:75em;
+	max-width:75rem;
+}
+
+footer[role="contentinfo"] {
+	margin: 0;
+	max-width:100%;
+	
 }
 
 .site-content {
@@ -31,7 +37,7 @@
 	width:20%;
 }
 
-article {
+.site-content article {
 	background-color:white;
 	padding:1em;
 	border-left:.375em solid #ff7a00;
@@ -52,9 +58,34 @@ article * {color:#404040;}
 	font-weight:bold;
 }
 
+.entry-content p {
+	margin-bottom:.25em;
+	line-height:1.25em;
+}
+
 .site-header {
 	padding:0;
 }
 .main-navigation {
 	margin-top:0;
+}
+
+
+
+.widget-area .widget h3 {
+    margin-bottom: .25em;
+}
+
+.entry-content h2, .comment-content h2, .mu_register h2 {
+    font-size: 1.28571rem;
+    line-height: 1;
+}
+
+.main-navigation li ul {
+	z-index:1000;
+}
+
+
+.template-front-page .site-content article {
+	margin-bottom:5.14286rem;
 }

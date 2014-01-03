@@ -10,12 +10,14 @@
  */
 ?>
 	</div><!-- #main .wrapper -->
-	<footer id="colophon" role="contentinfo">
-		<div class="site-info">
+	
+</div><!-- #page -->
+<footer id="colophon" role="contentinfo">
+		<div class="site-info site">
+			<div class="fbdd-button" style="border-color:#3b5988;"><a href="https://facebook.com/fablabdd">Facebook</a></div>
+			<div class="fbdd-button"><a href="/newsletter-sign-in/">Newsletter</a></div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
-
 <?php wp_footer(); ?>
 </body>
 </html>
