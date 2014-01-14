@@ -26,8 +26,10 @@
 footer[role="contentinfo"] {
 	margin: 0;
 	max-width:100%;
-	
+	font-size: 1rem;
 }
+
+
 
 .site-content {
 	width:75%;
@@ -60,16 +62,65 @@ article * {color:#404040;}
 
 .entry-content p {
 	margin-bottom:.25em;
-	line-height:1.25em;
+	line-height:1.5em;
+}
+
+.entry-content img, .comment-content img, .widget img, img.header-image, .author-avatar img, img.wp-post-image {
+    border-radius: 0;
 }
 
 .site-header {
 	padding:0;
 }
 .main-navigation {
-	margin-top:0;
+	margin-top:1rem;
+	background-color:#fea501;
+	border-left:#ff8601 solid .375em;
+	border-top:0;
+	border-bottom:0;
 }
 
+.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
+	border:0;
+}
+
+nav.main-navigation > div > ul > li > a {
+	padding: 0 1rem 0 1rem;
+	border-right: solid .125em #ffc62e;
+}
+
+.main-navigation li {
+	margin:0;
+
+	font-weight:bold;
+}
+
+.main-navigation li a {
+	color:#313131;	
+}
+
+
+
+.main-navigation .sub-menu {
+	
+	background-color:#fea501;
+	
+	
+}
+
+.main-navigation .sub-menu li {
+	border-top: solid .125em #ffc62e;
+}
+
+.main-navigation .submenu a {
+	padding:0 .125em;	
+}
+
+
+.main-navigation li ul li a,.main-navigation li ul li a:hover {
+	background:none;
+	border-bottom:0;
+}
 
 
 .widget-area .widget h3 {
@@ -88,4 +139,24 @@ article * {color:#404040;}
 
 .template-front-page .site-content article {
 	margin-bottom:5.14286rem;
+}
+
+
+
+
+
+
+.main-navigation li a {
+	color:#333;
+}
+
+
+.widget-area .widget a {
+    color: #333;
+}
+.widget-area .widget a:visited {
+    color: #555;
+}
+.widget-area .widget a:link {
+    color: #555;
 }

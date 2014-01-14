@@ -61,7 +61,7 @@ footer[role="contentinfo"] {
 }
 
 .fbdd-post-list .wp-post-image {
-	width:20%;height:auto;
+	width:40%;height:auto;
 	float:left;
 	margin:0 1em 1em 0;
 }
@@ -78,10 +78,119 @@ footer[role="contentinfo"] {
 	margin-right:1em;
 }
 
+.fbdd-button.nodeco {
+	background:none; border:none;
+}
+
+
 .fbdd-button a {
 	text-decoration:none;
+	padding-left:.375em; /* for the fa icon */
 }
 
 .fbdd-button a:hover {
 	text-decoration:underline;
+}
+
+/** makes the homepage text left brodered */
+.template-front-page .site-content article {
+	border-left:.375em solid #ff7a01;
+}
+.template-front-page .site-content .fbdd-home-teaser article {
+	border-left-color:transparent;
+}
+
+.template-front-page .site-content .fbdd-home-events article {
+	border-left-color:#0080d7;
+}
+
+.template-front-page .site-content .fbdd-home-image article {
+	border-left-color:#00d070;
+	margin:0;
+}
+
+.fbdd-home-image {
+	display:table-cell;
+	width:400px;
+	
+	vertical-align:top;
+	
+}
+
+.fbdd-home-teaser {
+	display:table-cell;
+	padding-left:.375rem;
+	vertical-align:top;
+	
+}
+
+
+
+.fbdd-home-events {
+	
+	display:table-cell;
+	width:400px;
+	vertical-align:top;
+}
+
+.fbdd-home-upcoming {
+	display:table-cell;
+	padding-left:.375rem;
+	vertical-align:top;
+}
+
+.fbdd-home-layout-row {
+	clear:both;
+	padding-bottom:2rem;
+	
+}
+.fbdd-home-image article {
+	height:300px;overflow:hidden;
+	width:300px;overflow:hidden;
+	display:block;
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
+	background-size:100% auto;
+}
+
+
+.template-front-page .site-content .fbdd-home-upcoming article {
+	margin-bottom:1rem;
+}
+
+.template-front-page .site-content .fbdd-home-teaser article {
+	height:300px;overflow:hidden;
+	margin:0;
+}
+
+.fbdd-home-teaser p {
+	font-weight:900;
+	font-size:1.75rem;
+	margin-bottom:.25rem;
+	
+	-moz-hyphens: none;
+   -o-hyphens: none;
+   -webkit-hyphens: none;
+   -ms-hyphens: none;
+   -hyphens: none;
+   hyphens: none;
+	
+}
+.fbdd-home-teaser a {
+	color:#0198FF;
+	text-decoration: none;
+}
+
+.fbdd-home-teaser a:visited {
+	color:#0198FF;
+}
+
+.fbdd-home-teaser a:hover {
+	text-decoration: underline;
+}
+
+
+.template-front-page.has-post-thumbnail article {
+    float: none;
+    width: auto;
 }

@@ -30,6 +30,7 @@
 <![endif]-->
 <?php wp_head(); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/fablabdd.css" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>

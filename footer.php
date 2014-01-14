@@ -14,8 +14,9 @@
 </div><!-- #page -->
 <footer id="colophon" role="contentinfo">
 		<div class="site-info site">
-			<div class="fbdd-button" style="border-color:#3b5988;"><a href="https://facebook.com/fablabdd">Facebook</a></div>
-			<div class="fbdd-button"><a href="/newsletter-sign-in/">Newsletter</a></div>
+			<div class="fbdd-button nodeco" ><i class="fa fa-facebook"></i><a href="https://facebook.com/fablabdd">FabLab Dresden bei Facebook</a></div>
+			<div class="fbdd-button nodeco" ><i class="fa fa-envelope-o"></i><a href="/newsletter-sign-in/">Newsletteranmeldung</a></div>
+			<div class="fbdd-button nodeco" ><i class="fa fa-pencil-square"></i><a href="mailto:Info@fablabdd.de">Email an Info@fablabdd.de</a></div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 <?php wp_footer(); ?>
