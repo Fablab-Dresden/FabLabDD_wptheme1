@@ -52,10 +52,12 @@ get_header(); ?>
 					<div class="fbdd-home-upcoming">
 					<?php 
 						$the_query = new WP_Query( array('cat'=>4) );
+						$GLOBALS['fldd']->show_excerpts = true; # makes displaying excerpts
 						while ( $the_query->have_posts() ) {
 							$the_query->the_post();
 							get_template_part( 'content' );
 						}
+						$GLOBALS['fldd']->show_excerpts = false;
 					?>
 					
 					</div>	

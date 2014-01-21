@@ -1,9 +1,14 @@
 <?php
 
 $fldd = (object) array(
-		'basedir'=>__DIR__.'/../twentytwelve/'
+		'basedir'=>__DIR__.'/../twentytwelve/',
+		'show_excerpts' => false
 );
 
+function new_excerpt_more( $more ) {
+	return ' <br /><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Zum ganzen Beitrag</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 function fldd_metanavi() {
 	
@@ -34,3 +39,5 @@ function fldd_metanavi() {
 	
 	
 }
+
+

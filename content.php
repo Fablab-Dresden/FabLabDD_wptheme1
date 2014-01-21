@@ -11,6 +11,9 @@
 
 $thumbnailclass =  is_single() ? "" : "fbdd-post-list";
 
+// Only display Excerpts for Search
+$display_short =  is_search() || $GLOBALS['fldd']->show_excerpts ? true : false;
+
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -28,16 +31,16 @@ $thumbnailclass =  is_single() ? "" : "fbdd-post-list";
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
 			<?php endif; // is_single() ?>
-			<?php if ( comments_open() ) : ?>
+			<?php if ( comments_open() && ! $display_short) : ?>
 				<div class="comments-link">
 					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
 		</header><!-- .entry-header -->
 
-		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<?php if ( $display_short ) :  ?>
 		<div class="entry-summary">
-			<?php the_excerpt(); ?>
+			<?php the_excerpt(  ); ?>
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">
@@ -46,7 +49,9 @@ $thumbnailclass =  is_single() ? "" : "fbdd-post-list";
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
+		
 		<footer class="entry-meta">
+		<?php if ( ! $display_short ) : // Only display Excerpts for Search ?>
 			<?php twentytwelve_entry_meta(); ?>
 			<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 			<?php if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) : // If a user has filled out their description and this is a multi-author blog, show a bio on their entries. ?>
@@ -69,5 +74,6 @@ $thumbnailclass =  is_single() ? "" : "fbdd-post-list";
 					</div><!-- .author-description -->
 				</div><!-- .author-info -->
 			<?php endif; ?>
+		<?php endif; ?>	
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->
