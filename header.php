@@ -35,6 +35,12 @@
 
 <body <?php body_class(); ?>>
 <div id="pagehead1"><div class="site">
+<div class="metanavicons" >
+	<a href="https://facebook.com/fablabdd" title="FabLab Dresden bei Facebook" ><i class="fa fa-facebook"></i></a>
+	<a href="https://facebook.com/fablabdd" title="FabLab Dresden bei Twitter" ><i class="fa fa-twitter"></i></a>
+	<a href="/newsletter-sign-in/" title="Newsletteranmeldung" ><i class="fa fa-envelope-o"></i></a>
+	<a href="mailto:Info@fablabdd.de" title="Email an Info@fablabdd.de" ><i class="fa fa-pencil-square"></i></a>
+</div>
 <?php fldd_metanavi() ?>
 </div></div>
 <div id="pagehead2"><div class="site">

@@ -32,6 +32,15 @@
 	text-decoration: underline;
 }
 
+.metanavicons {
+	float:right;
+	padding-left:1.5em;
+}
+
+.metanavicons a {
+	padding-left:.5em;
+}
+
 #pagehead2 {
 	background-color: #001523;
     color: #FFFFFF;
