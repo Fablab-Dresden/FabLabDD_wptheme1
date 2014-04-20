@@ -42,11 +42,17 @@ get_header(); ?>
 				</div>
 				<div class="fbdd-home-layout-row">
 					<div class="fbdd-home-events"><?php 
+					
 						$the_query = new WP_Query( array('pagename'=>'Home - events') );
 						while ( $the_query->have_posts() ) {
 							$the_query->the_post();
 							get_template_part( 'content', 'page' );
 						}
+						
+
+						dynamic_sidebar( 'fbdd-front-sidebar' );
+							
+							
 					?>
 					</div>
 					<div class="fbdd-home-upcoming">

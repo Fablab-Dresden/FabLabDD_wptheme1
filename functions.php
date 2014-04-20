@@ -5,6 +5,17 @@ $fldd = (object) array(
 		'show_excerpts' => false
 );
 
+register_sidebar(array(
+	'name' => __( 'FablabDD Startseiten' ),
+	'id' => 'fbdd-front-sidebar',
+	'description' => __( 'Widgets für die Startseite' ),
+	// 'before_title' => '<article class=" page type-page status-publish hentry" >',
+	// 'after_title' => '</h1>'
+	'before_widget' => '<article id="%1$s" class="page type-page status-publish hentry widget %2$s">',
+	'after_widget' => '</article>'
+));
+
+
 function new_excerpt_more( $more ) {
 	return ' <br /><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Zum ganzen Beitrag</a>';
 }

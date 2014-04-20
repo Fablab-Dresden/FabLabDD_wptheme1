@@ -14,6 +14,7 @@ $thumbnailclass =  is_single() ? "" : "fbdd-post-list";
 // Only display Excerpts for Search
 $display_short =  is_search() || $GLOBALS['fldd']->show_excerpts ? true : false;
 
+
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
