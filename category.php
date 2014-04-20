@@ -12,10 +12,13 @@
  */
 
 get_header(); ?>
-
+<?php if(!in_category('metafab')) { ?>
 	<section id="primary" class="site-content">
+<?php } else { ?>
+	<section id="primary" class="site-content metafab">
+<?php } ?>
+	<!-- <section id="primary" class="site-content"> -->
 		<div id="content" role="main">
-
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -39,6 +42,5 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
+<?php if(!in_category('metafab')) { get_sidebar(); }?>
 <?php get_footer(); ?>

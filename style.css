@@ -165,3 +165,5 @@ nav.main-navigation > div > ul > li > a {
 .widget-area .widget a:link {
     color: #555;
 }
+
+.site-content.metafab { width: 100%; }

@@ -44,7 +44,19 @@
 <?php fldd_metanavi() ?>
 </div></div>
 <div id="pagehead2"><div class="site">
-	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+<?php if( in_category('metafab') || is_page('metafab') ) { ?>
+	<h1 class="site-title">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			METAFAB
+		</a>
+	</h1>
+<?php } else{ ?>
+	<h1 class="site-title">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<?php bloginfo( 'name' ); ?>
+		</a>
+	</h1>
+<?php } ?>
 </div></div>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">

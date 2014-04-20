@@ -4,10 +4,69 @@
 /** ======= */
 
 
-@font-face {
+/*@font-face {
     font-family: "Kabel";
     src: url("Kabel.woff") format("woff");
+}*/
+
+@font-face {
+    font-family: 'trackregular';
+    src: url('font/track-webfont.eot');
+    src: url('font/track-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/track-webfont.woff') format('woff'),
+         url('font/track-webfont.ttf') format('truetype'),
+         url('font/track-webfont.svg#trackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'trackitalic';
+    src: url('font/track_italic-webfont.eot');
+    src: url('font/track_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/track_italic-webfont.woff') format('woff'),
+         url('font/track_italic-webfont.ttf') format('truetype'),
+         url('font/track_italic-webfont.svg#trackitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'misoregular';
+    src: url('font/miso-regular-webfont.eot');
+    src: url('font/miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/miso-regular-webfont.woff') format('woff'),
+         url('font/miso-regular-webfont.ttf') format('truetype'),
+         url('font/miso-regular-webfont.svg#misoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'misolight';
+    src: url('font/miso-light-webfont.eot');
+    src: url('font/miso-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/miso-light-webfont.woff') format('woff'),
+         url('font/miso-light-webfont.ttf') format('truetype'),
+         url('font/miso-light-webfont.svg#misolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'misobold';
+    src: url('font/miso-bold-webfont.eot');
+    src: url('font/miso-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/miso-bold-webfont.woff') format('woff'),
+         url('font/miso-bold-webfont.ttf') format('truetype'),
+         url('font/miso-bold-webfont.svg#misobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.custom-font-enabled { font-family: misoregular; }
+h1,h2,h3,h4,h5,h6 { font-family: trackregular; }
+
 
 
 #pagehead1 {
@@ -47,9 +106,10 @@
 }
 
 #pagehead2 h1 {
-	font-family: Kabel;
+	font-family: trackregular;
 	font-size: 4em;
     font-weight: normal;
+    font-style: normal;
     margin:0;
     padding: .875em 0 .375em 0;
 }
@@ -68,6 +128,12 @@
 footer[role="contentinfo"] {
 	border-top:.125rem solid black;
 }
+
+div#content .entry-content, div#content .entry-summary, div#content .mu_register,
+div.fbdd-home-layout .entry-summary p,
+div.fbdd-home-layout .entry-content p,
+div.fbdd-home-layout .comment-content p,
+div.fbdd-home-layout .mu_register p { font-size: 140%; line-height: 1.2em; }
 
 .fbdd-post-list .wp-post-image {
 	width:40%;height:auto;
@@ -208,4 +274,16 @@ footer[role="contentinfo"] {
 .fbdd-home-events .tagcloud a {
 	text-decoration:none;
 }
+
+nav.main-navigation .sub-menu li { width: 100%; }
+nav.main-navigation .sub-menu li:hover { background-color: #FF8601; }
+
+nav.main-navigation li.menu-item a{ 
+	font-size: 160%;
+	line-height: 2.5;
+}
+
+nav.main-navigation ul.sub-menu a {
+	font-size: 140%;
+	line-height: 1.8;
 }
