@@ -18,6 +18,7 @@
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
+
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
@@ -28,6 +29,7 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+
 <?php wp_head(); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/fablabdd.css" />
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -52,7 +54,7 @@
 			METAFAB
 		</a>
 	</h1>
-	
+
 <?php } else{ ?>
 	<h1 class="site-title">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -66,8 +68,8 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
-			<?php 
-			
+			<?php
+
 			wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu' => fldd_is_metafab() ? 'metafab':null  ) ); ?>
 		</nav><!-- #site-navigation -->
 

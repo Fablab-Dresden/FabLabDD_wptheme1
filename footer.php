@@ -10,7 +10,7 @@
  */
 ?>
 	</div><!-- #main .wrapper -->
-	
+
 </div><!-- #page -->
 <footer id="colophon" role="contentinfo">
 		<div class="site-info site">
@@ -29,7 +29,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   ga('set', 'anonymizeIp', true);
   ga('send', 'pageview');
 
-</script> 
+</script>
 		</footer><!-- #colophon -->
 <?php wp_footer(); ?>
 </body>
