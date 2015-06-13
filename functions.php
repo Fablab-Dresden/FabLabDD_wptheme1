@@ -69,3 +69,50 @@ function fldd_plugin_options() {
 	echo '<p>Here is where the form would go if I actually had options.</p>';
 	echo '</div>';
 }
+
+function fldd_is_metafab() {
+	
+	if (is_page()) {
+		
+		if (is_page('metafab')) { return true; }
+		
+		$metafab_page = get_page_by_title('metafab' );
+		$page_ids = get_ancestors(get_the_ID(),'page');
+		
+		foreach ($page_ids as $page_id) {
+			if ($page_id == $metafab_page->ID ) { return true; }
+		}
+		
+		return false;
+	}
+	
+	
+	$metafab_cat = get_term_by( 'name', 'metafab', 'category' );
+	$metafab_cat_id = $metafab_cat->term_id;
+	
+	return  post_is_in_descendant_category($metafab_cat_id);
+	
+}
+/**
+ * Tests if any of a post's assigned categories are descendants of target categories
+*
+* @param int|array $cats The target categories. Integer ID or array of integer IDs
+* @param int|object $_post The post. Omit to test the current post in the Loop or main query
+* @return bool True if at least 1 of the post's categories is a descendant of any of the target categories
+* @see get_term_by() You can get a category by name or slug, then pass ID to this function
+* @uses get_term_children() Passes $cats
+* @uses in_category() Passes $_post (can be empty)
+* @version 2.7
+* @link http://codex.wordpress.org/Function_Reference/in_category#Testing_if_a_post_is_in_a_descendant_category
+*/
+if ( ! function_exists( 'post_is_in_descendant_category' ) ) {
+	function post_is_in_descendant_category( $cats, $_post = null ) {
+		foreach ( (array) $cats as $cat ) {
+			// get_term_children() accepts integer ID only
+			$descendants = get_term_children( (int) $cat, 'category' );
+			if ( $descendants && in_category( $descendants, $_post ) )
+				return true;
+		}
+		return false;
+	}
+}

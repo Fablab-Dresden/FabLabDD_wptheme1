@@ -36,20 +36,23 @@
 <body <?php body_class(); ?>>
 <div id="pagehead1"><div class="site">
 <div class="metanavicons" >
+	<?php if(fldd_is_metafab() ) { ?><a href="/" style="padding-right:1em;">fab:lab:dd</a><?php } ?>
 	<a href="https://facebook.com/fablabdd" target="_blank" title="FabLab Dresden bei Facebook" ><i class="fa fa-facebook"></i></a>
 	<a href="https://twitter.com/fablabdd" target="_blank" title="FabLab Dresden bei Twitter" ><i class="fa fa-twitter"></i></a>
 	<a href="/newsletter-sign-in/" title="Newsletteranmeldung" ><i class="fa fa-envelope-o"></i></a>
 	<a href="mailto:Info@fablabdd.de" title="Email an Info@fablabdd.de" ><i class="fa fa-pencil-square"></i></a>
-</div>
+	</div>
 <?php fldd_metanavi() ?>
 </div></div>
 <div id="pagehead2"><div class="site">
-<?php if( in_category('metafab') || is_page('metafab') ) { ?>
-	<h1 class="site-title">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+<?php if(fldd_is_metafab() ) { ?>
+	<!-- <div id="backtofablabdd"><a href="/" >fab:lab:dd</a></div> -->
+  <h1 class="site-title">
+		<a href="<?php echo esc_url( home_url( '/metafab' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			METAFAB
 		</a>
 	</h1>
+	
 <?php } else{ ?>
 	<h1 class="site-title">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -63,7 +66,9 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php 
+			
+			wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu' => fldd_is_metafab() ? 'metafab':null  ) ); ?>
 		</nav><!-- #site-navigation -->
 
 		<?php if ( get_header_image() ) : ?>

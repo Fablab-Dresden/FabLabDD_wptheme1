@@ -64,10 +64,28 @@
     font-style: normal;
 }
 
-body.custom-font-enabled { font-family: misoregular; }
-h1,h2,h3,h4,h5,h6 { font-family: trackregular; }
 
+.entry-content h1, .entry-content h2,
+.entry-content h3, .entry-content h4,
+.entry-content h5,.entry-content h6 { 
+	font-family: misobold; 
+}
 
+.entry-header .entry-title {
+	font-size:2rem;
+}
+
+.entry-content h2, .comment-content h2, .mu_register h2 {
+	font-size:1.75rem;
+}
+
+.entry-content h3, .comment-content h3, .mu_register h3 {
+	font-size:1.5rem;
+}
+
+.entry-content h4, .comment-content h4, .mu_register h4 {
+	font-size:1.25rem;
+}
 
 #pagehead1 {
 	background-color: #012138;
@@ -89,6 +107,14 @@ h1,h2,h3,h4,h5,h6 { font-family: trackregular; }
 
 #pagehead1 a:hover {
 	text-decoration: underline;
+}
+
+#backtofablabdd {
+	text-align:right;margin-bottom:
+}
+
+#backtofablabdd * {
+	color:white;
 }
 
 .metanavicons {
@@ -129,12 +155,12 @@ footer[role="contentinfo"] {
 	border-top:.125rem solid black;
 }
 
-div#content .entry-content, div#content .entry-summary, div#content .mu_register,
+/* div#content .entry-content, div#content .entry-summary, div#content .mu_register,
 div.fbdd-home-layout .entry-summary p,
 div.fbdd-home-layout .entry-content p,
 div.fbdd-home-layout .comment-content p,
 div.fbdd-home-layout .mu_register p { font-size: 140%; line-height: 1.2em; }
-
+ */
 .fbdd-post-list .wp-post-image {
 	width:40%;height:auto;
 	float:left;
@@ -273,6 +299,10 @@ div.fbdd-home-layout .mu_register p { font-size: 140%; line-height: 1.2em; }
 
 .fbdd-home-events .tagcloud a {
 	text-decoration:none;
+}
+
+nav.main-navigation {
+	font-family:misoregular;
 }
 
 nav.main-navigation .sub-menu li { width: 100%; }

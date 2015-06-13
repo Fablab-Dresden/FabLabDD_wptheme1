@@ -13,13 +13,12 @@
  */
 
 get_header(); ?>
-<?php if(!is_page('METAFAB')) { ?>
-	<div id="primary" class="site-content">
-<?php } else { ?>
+<?php if(fldd_is_metafab()) { ?>
 	<div id="primary" class="site-content metafab">
+<?php } else { ?>
+	<div id="primary" class="site-content">
 <?php } ?>
 		<div id="content" role="main">
-
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 				<?php comments_template( '', true ); ?>
@@ -27,5 +26,5 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-<?php if(!is_page('METAFAB')) { get_sidebar(); } ?>
+<?php if(!fldd_is_metafab()) { get_sidebar(); } ?>
 <?php get_footer(); ?>

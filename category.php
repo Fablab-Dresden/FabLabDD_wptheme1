@@ -11,11 +11,11 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
+get_header(); ?>XXXX
 <?php if(!in_category('metafab')) { ?>
-	<section id="primary" class="site-content">
+	<section id="primary" class="site-content">is fablab
 <?php } else { ?>
-	<section id="primary" class="site-content metafab">
+	<section id="primary" class="site-content metafab">is metafab
 <?php } ?>
 	<!-- <section id="primary" class="site-content"> -->
 		<div id="content" role="main">
